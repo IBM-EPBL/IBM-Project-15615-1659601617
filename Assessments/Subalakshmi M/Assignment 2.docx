@@ -1,0 +1,12 @@
+import random
+def generate_values():
+    a,b=10,100
+    temperature = random.randint(a, b)
+    humidity = random.randint(a, temperature)
+    return humidity, temperature
+humidity = temperature = 0
+while temperature < 100:
+      humidity, temperature = generate_values()
+      print('Humidity:', humidity, 'Temperature:', temperature)
+      if temperature > 50:
+       print('High Temperature Detected, ALARM ON')
